@@ -10,6 +10,7 @@ const tours = props => {
   return (
     <Layout>
       <StyledHero img={img}></StyledHero>
+      Tour
     </Layout>
   )
 }

@@ -9,6 +9,7 @@ const blog = props => {
   return (
     <Layout>
       <StyledHero img={img}></StyledHero>
+      Blog
     </Layout>
   )
 }
