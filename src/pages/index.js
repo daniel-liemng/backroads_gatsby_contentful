@@ -1,29 +1,49 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout/Layout"
-import SimpleHero from "../components/utils/SimpleHero"
+import StyledHero from "../components/utils/StyledHero"
 import Banner from "../components/utils/Banner"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 
-const index = () => {
+const index = ({
+  data: {
+    file: {
+      childImageSharp: { fluid: img },
+    },
+  },
+}) => {
   return (
     <Layout>
-      <SimpleHero>
+      <StyledHero img={img} home>
         <Banner
           title="continue exploring"
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, magni."
         >
-          <Link to="/tours" className="btn-white">
+          <AniLink swipe to="/tours" className="btn-white">
             explore tours
-          </Link>
+          </AniLink>
         </Banner>
-      </SimpleHero>
+      </StyledHero>
       <About />
       <Services />
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default index

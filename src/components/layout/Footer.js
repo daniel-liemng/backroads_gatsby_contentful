@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "../../css/footer.module.css"
 
@@ -11,9 +12,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.links}>
         {links.map((item, index) => (
-          <Link to={item.path} key={index}>
+          <AniLink swipe to={item.path} key={index}>
             {item.text}
-          </Link>
+          </AniLink>
         ))}
       </div>
       <div className={styles.icons}>
