@@ -1,16 +1,17 @@
-import React from "react"
+import React from "react";
 // import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout/Layout"
-import StyledHero from "../components/utils/StyledHero"
-import Banner from "../components/utils/Banner"
-import About from "../components/Home/About"
-import Services from "../components/Home/Services"
+import Layout from "../components/layout/Layout";
+import StyledHero from "../components/utils/StyledHero";
+import Banner from "../components/utils/Banner";
+import About from "../components/Home/About";
+import Services from "../components/Home/Services";
+import FeaturedTours from "../components/Home/FeaturedTours";
 
 const index = ({
-  data: {
+data: {
     file: {
       childImageSharp: { fluid: img },
     },
@@ -30,9 +31,10 @@ const index = ({
       </StyledHero>
       <About />
       <Services />
+      <FeaturedTours />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -44,6 +46,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default index
+export default index;

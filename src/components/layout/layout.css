@@ -41,6 +41,10 @@ h6 {
 p {
   margin-bottom: 1.25rem;
 }
+
+a {
+  text-decoration: none;
+}
 .defaultHero {
   min-height: calc(100vh - 62px);
   background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
@@ -82,4 +86,8 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.rich {
+  background: var(--primaryColor);
 }

@@ -1,18 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout/Layout"
-import StyledHero from "../components/utils/StyledHero"
+import Layout from "../components/layout/Layout";
+import StyledHero from "../components/utils/StyledHero";
+import BlogList from "../components/Blog/BlogList";
 
-const blog = props => {
-  const img = props.data.file.childImageSharp.fluid
+const blog = (props) => {
+  const img = props.data.file.childImageSharp.fluid;
   return (
     <Layout>
       <StyledHero img={img}></StyledHero>
       Blog
+      <BlogList />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -24,6 +26,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default blog
+export default blog;
