@@ -5,9 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `BackRoads`,
-    description: `A Gatsby App for traveller.`,
+    description: `A Gatsby app for traveller`,
     author: `@liemnguyen`,
-    data: [`item1`, `item2`],
+    twitterUsername: `@john_doe`,
+    image: `defaultBcg.jpeg`,
+    siteUrl: `https://backroads-gatsby-contentful.netlify.app`,
   },
   plugins: [
     {
