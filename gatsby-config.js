@@ -10,6 +10,7 @@ module.exports = {
     twitterUsername: `@john_doe`,
     image: `defaultBcg.jpeg`,
     siteUrl: `https://backroads-gatsby-contentful.netlify.app`,
+    data: `Hi from gatsby`,
   },
   plugins: [
     {
